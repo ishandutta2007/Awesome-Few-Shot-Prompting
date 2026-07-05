@@ -12,7 +12,7 @@
         🚀 Awesome Few-Shot Prompting 🧠
     </text>
     <text x="400" y="145" font-family="Arial, sans-serif" font-size="20" fill="#f1c40f" text-anchor="middle" dominant-baseline="middle">
-        Curated list of prompt engineering & in-context learning techniques
+        Curated list of prompt engineering &amp; in-context learning techniques
     </text>
     <circle cx="100" cy="50" r="10" fill="#f1c40f">
         <animate attributeName="cy" values="50; 70; 50" dur="2s" repeatCount="indefinite" />
