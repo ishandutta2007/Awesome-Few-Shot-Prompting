@@ -34,21 +34,21 @@ The implementation of example-driven model conditioning has transitioned from tr
 
 Few-Shot Prompting frameworks are strictly categorized based on the logical complexity of the demonstration steps and the data modalities they map.
 
-### A. Standard Input-Output Few-Shot Prompting
-*   **Mechanism:** Provides direct, flat mappings from query to answer without describing the intermediate process:
-    $$\text{Prompt} = \{X_1, Y_1\} \cup \{X_2, Y_2\} \dots \cup \{X_{\text{query}}\}$$
-*   **Behavior:** Highly effective for structured data transformations, classification lookups, and JSON schema formatting, but collapses on complex math or strategic deduction.
+- ### A. Standard Input-Output Few-Shot Prompting
+	*   **Mechanism:** Provides direct, flat mappings from query to answer without describing the intermediate process:
+	    $$\text{Prompt} = \{X_1, Y_1\} \cup \{X_2, Y_2\} \dots \cup \{X_{\text{query}}\}$$
+	*   **Behavior:** Highly effective for structured data transformations, classification lookups, and JSON schema formatting, but collapses on complex math or strategic deduction.
 
-### B. Few-Shot Chain-of-Thought (CoT Prompting)
-*   **Mechanism:** Popularized by Wei et al. It modifies the exemplars to include an explicit, verbose **multi-step reasoning trace ($R$)** before the final answer token appears:
-    $$\text{Exemplar} = \{X_i, R_i, Y_i\}$$
-*   **Pros:** Forces the model's self-attention layers to replicate the step-by-step thinking habits demonstrated in the prefix context, resolving long-horizon logical and mathematical tasks safely [INDEX: 1].
+- ### B. Few-Shot Chain-of-Thought (CoT Prompting)
+	*   **Mechanism:** Popularized by Wei et al. It modifies the exemplars to include an explicit, verbose **multi-step reasoning trace ($R$)** before the final answer token appears:
+	    $$\text{Exemplar} = \{X_i, R_i, Y_i\}$$
+	*   **Pros:** Forces the model's self-attention layers to replicate the step-by-step thinking habits demonstrated in the prefix context, resolving long-horizon logical and mathematical tasks safely [INDEX: 1].
 
-### C. Exemplar Order Permutation Scaling
-*   **Mechanism:** A defensive runtime prompt calibration layer. Because models exhibit a structural **Recency Bias**—meaning they disproportionately prioritize the very last example right before the query token—this variant runs multiple parallel permutations of example order sequences, averaging output logit distributions to eliminate positional distortion.
+- ### C. Exemplar Order Permutation Scaling
+	*   **Mechanism:** A defensive runtime prompt calibration layer. Because models exhibit a structural **Recency Bias**—meaning they disproportionately prioritize the very last example right before the query token—this variant runs multiple parallel permutations of example order sequences, averaging output logit distributions to eliminate positional distortion.
 
-### D. Interleaved Cross-Modal Few-Shot Prompting
-*   **Mechanism:** Deployed within native multi-modal Vision-Language Models (VLMs) [INDEX: 1]. The exemplars interleave visual patch matrices with text token definitions concurrently (e.g., `[Image Patch Block #1] -> Caption: White extraction turbine \n [Image Patch Block #2] -> Caption: ...`), forcing cross-modal attention maps to align zero-shot [INDEX: 1].
+- ### D. Interleaved Cross-Modal Few-Shot Prompting
+	*   **Mechanism:** Deployed within native multi-modal Vision-Language Models (VLMs) [INDEX: 1]. The exemplars interleave visual patch matrices with text token definitions concurrently (e.g., `[Image Patch Block #1] -> Caption: White extraction turbine \n [Image Patch Block #2] -> Caption: ...`), forcing cross-modal attention maps to align zero-shot [INDEX: 1].
 
 ---
 
