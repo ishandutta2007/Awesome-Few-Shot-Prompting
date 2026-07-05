@@ -131,3 +131,15 @@ Before updating this documentation layout, let me know how you would like to pro
 * I can generate a **Markdown matrix table** tracking the default context boundaries, exemplar capacities, and structural pooling layers of the leading foundation open-weight models [INDEX: 11].
 * I can write a detailed technical explanation focusing on the **mathematics of In-Context Learning activation field mechanics** and how cross-token attention matrices simulate gradient updates dynamically at runtime without modifying weight parameters.
 
+
+
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Few-Shot-Prompting&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Few-Shot-Prompting&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Few-Shot-Prompting&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Few-Shot-Prompting&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
