@@ -13,7 +13,11 @@ The implementation of example-driven model conditioning has transitioned from tr
 
 
 ```mermaid
-[Weight Fine-Tuning Era (BERT, 2018)] ───> [In-Context Few-Shot (GPT-3, 2020)] ───> [Dynamic / Automated Exemplars] ───> [Many-Shot Long Contexts (2024+)](Destructive Overwriting Gradients)          (Static Prompt-Level Context Windows)        (Vector Search Token-Distance Selection)      (Massive Multi-Megapixel/Token Ingestion)
+flowchart LR
+    A["Weight Fine-Tuning (BERT Era, 2018)<br/>(Task-Specific Parameter Updates)"]
+    --> B["In-Context Learning (GPT-3, 2020)<br/>(Few-Shot Prompt Conditioning)"]
+    --> C["Dynamic Example Retrieval<br/>(Retrieval-Augmented Demonstrations)"]
+    --> D["Long-Context In-Context Learning (2024+)<br/>(Large-Scale Many-Shot Prompting)"]
 ```
 
 *   **The Parameter Fine-Tuning Dominance Era (Traditional Deep Learning, Pre-2020)**
@@ -59,7 +63,21 @@ To process long sequences of few-shot example contexts without triggering VRAM s
 
 
 ```mermaid
-Prefix Context Page Lock Matrix[Static 50-Example Prefix Tokens] ───> [Compute KV Cache Matrix Once] ───> [Lock Blocks in Paged VRAM]│▼[Causal Token Generation] <─── [Evaluate Attention Maps] <─── [Stream User-Query Token straight to Registers]
+flowchart TB
+
+subgraph P["Prefix Cache Initialization"]
+    A["Static Prefix Context"]
+    --> B["Compute KV Cache"]
+    --> C["Pin Cached KV Pages"]
+end
+
+subgraph I["Inference"]
+    D["Incoming User Query"]
+    --> E["Reuse Cached KV"]
+    C --> E
+    E --> F["Attention Computation"]
+    F --> G["Generate Next Token"]
+end
 ```
 
 *   **PagedAttention Prefix Cache Locking**
