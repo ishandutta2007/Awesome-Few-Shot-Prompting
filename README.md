@@ -1,5 +1,9 @@
+<div align="center">
+  <img src="assets/banner.svg" alt="Banner" width="800" />
+</div>
+
 # Awesome-Few-Shot-Prompting
-## Few-Shot Prompting in AI: History, Progression, Variants, & Applications
+## 🧠 Few-Shot Prompting in AI: History, Progression, Variants, & Applications 🚀
 
 **Few-Shot Prompting**—formally designated as In-Context Learning (ICL)—is an advanced prompt-engineering and operational paradigm that conditions Large Language Models (LLMs) and Multi-Modal Vision-Language Models (VLMs) to execute specific downstream tasks by providing a limited number of input-output demonstrations directly within the prompt template [INDEX: 11]. Unlike traditional machine learning pipelines that require permanent structural modifications to parameter weights via fine-tuning (SFT/DPO), Few-Shot Prompting relies entirely on the dynamic activation states of the model's frozen self-attention layers [INDEX: 11]. 
 
@@ -7,7 +11,7 @@ By framing a task through continuous examples (typically 1 to 5 context pairs), 
 
 ---
 
-## 1. The Macro Chronological Evolution
+## ⏳ 1. The Macro Chronological Evolution
 
 The implementation of example-driven model conditioning has transitioned from traditional weight-tuning paradigms to rigid few-shot structures, automated example selection strategies, and modern multi-modal reasoning enclaves.
 
@@ -29,7 +33,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Formatting Variants
+## 🛠️ 2. Core Functional & Formatting Variants
 
 Few-Shot Prompting frameworks are strictly categorized based on the logical complexity of the demonstration steps and the data modalities they map.
 
@@ -42,7 +46,7 @@ Few-Shot Prompting frameworks are strictly categorized based on the logical comp
 
 ---
 
-## 3. The In-Context Activation & Attention Matrix
+## 🔮 3. The In-Context Activation & Attention Matrix
 
 To process long sequences of few-shot example contexts without triggering VRAM saturation stalls, modern serving infrastructures deploy virtual memory block routers [INDEX: 22].
 
@@ -73,7 +77,7 @@ end
 
 ---
 
-## 4. Production Engineering Challenges & Mitigations
+## 🚧 4. Production Engineering Challenges & Mitigations
 
 Scaling example-driven prompts across enterprise software applications introduces intense data contamination risks and context latency walls [INDEX: 22].
 
@@ -84,7 +88,7 @@ Scaling example-driven prompts across enterprise software applications introduce
 
 ---
 
-## 5. Frontier Real-World AI Applications
+## 🌍 5. Frontier Real-World AI Applications
 
 | Application | Description | Year First Used | Link to Paper |
 |---|---|---|---|
@@ -94,7 +98,7 @@ Scaling example-driven prompts across enterprise software applications introduce
 
 ---
 
-## References
+## 📚 References
 1. Devlin, J., et al. (2018). BERT: Pre-training of deep bidirectional transformers for language understanding. *arXiv preprint arXiv:1810.04805* [INDEX: 1].
 2. Brown, T., et al. (2020). Language models are few-shot learners: In-context learning scaling frontiers. *Advances in Neural Information Processing Systems (NeurIPS)*, 33, 1877-1901 [INDEX: 11].
 3. Wei, J., et al. (2022). Chain-of-thought prompting elicits reasoning in large language models. *Advances in Neural Information Processing Systems (NeurIPS)*, 35, 24824-24837 [INDEX: 1].

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2c3e50" />
+            <stop offset="100%" stop-color="#3498db">
+                <animate attributeName="stop-color" values="#3498db; #9b59b6; #3498db" dur="4s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+    </defs>
+    <rect width="800" height="200" fill="url(#bg)" rx="15" ry="15" />
+    <text x="400" y="100" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">
+        🚀 Awesome Few-Shot Prompting 🧠
+    </text>
+    <text x="400" y="145" font-family="Arial, sans-serif" font-size="20" fill="#f1c40f" text-anchor="middle" dominant-baseline="middle">
+        Curated list of prompt engineering & in-context learning techniques
+    </text>
+    <circle cx="100" cy="50" r="10" fill="#f1c40f">
+        <animate attributeName="cy" values="50; 70; 50" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="700" cy="150" r="15" fill="#e74c3c">
+        <animate attributeName="cy" values="150; 130; 150" dur="3s" repeatCount="indefinite" />
+    </circle>
+</svg>
